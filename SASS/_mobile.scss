@@ -1,0 +1,13 @@
+/*@media (max-width: 600px) {
+    /*Big smartphones [426px -> 600px]
+    body {
+        background: $mobilecolor;
+    }
+}*/
+
+@mixin mobile {
+    @media (max-width: $Mobile) {
+        /*Big smartphones [426px -> 600px]*/
+        @content;
+    }
+}

@@ -1,0 +1,126 @@
+@import './variables';
+@import './resets';
+@import './mobile';
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+
+/******************************************************/
+
+//body
+body {
+    background-color: $Violet;
+    background-image: url("/images/bg-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-weight: bodyWeight(bold);
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    /*********************/
+    /*Header Logo*/
+    header {
+        img {
+            width: 12rem;
+            margin: 0 5em;
+            padding: 2.5em 0;
+            font-size: 1em;
+        }
+    }
+    /**********************************/
+    //Main Content
+    main {
+        @include flexCenter(row);
+        margin: 0 5rem;
+        color: $White;
+        /******************/
+        //Background image
+        img {
+            margin-top: 2rem;
+        }
+        div {
+            padding: 0;
+            margin-left: 3rem;
+            margin-bottom: 10rem;
+            font-weight: $Body-Font-Weight;
+            /********************/
+            //Heading
+            h1 {
+                font-family: headings(semi-bold);
+            }
+            /**************/
+            //Paragraph Header
+            p {
+                padding-top: 1.5em;
+                font-family: headings(regular);
+            }
+            /****************/
+            /*Button*/
+            button {
+                text-align: center;
+                font-size: 1.2rem;
+                background: $White;
+                color: $Violet;
+                border: none;
+                border-radius: 50px;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease 0s;
+                width: 16%;
+                outline: none;
+                padding: 20px 15px;
+                margin: 20px 0;
+                position: absolute;
+                z-index: 1;
+                overflow: hidden;
+                &:hover {
+                    cursor: pointer;
+                    color: $White;
+                    background-color: $SoftMagenta;
+                }
+            }
+        }
+    }
+    /***************/
+    /*Footer*/
+    footer {
+        margin-top: 8rem;
+        div {
+            text-align: right;
+            //   margin-right: 0.5rem;
+            i {
+                margin: 0.5rem;
+                padding: 0.8em 1em;
+                font-size: 1rem;
+                color: $White;
+                border: 1px solid $White;
+                border-radius: 100%;
+                outline: none;
+                transition: all 0.3s ease 0s;
+                &:hover {
+                    cursor: pointer;
+                    color: $SoftMagenta;
+                    background-color: $Violet;
+                    border-color: $SoftMagenta;
+                }
+            }
+        }
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        .attribution a {
+            color: $White;
+        }
+    }
+}
+
+@include mobile {
+    body {
+        background-image: url("/images/bg-mobile.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
