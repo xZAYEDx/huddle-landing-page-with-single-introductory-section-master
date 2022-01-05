@@ -1,6 +1,5 @@
 # Frontend Mentor - Huddle landing page with single introductory section
 
-Demo: https://xzayedx.github.io/huddle-landing-page-with-single-introductory-section-master/
 
 ![Design preview for the Huddle landing page with single introductory section](./design/desktop-preview.jpg)
 
