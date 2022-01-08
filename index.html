@@ -23,7 +23,7 @@
     <!-- Font Style-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
@@ -35,26 +35,31 @@
     <!-- Header section -->
     <header>
 
-        <img src="./images/logo.svg">
+        <img src="./images/logo.svg" alt="logo">
     </header>
 
     <!-- Main content section -->
     <main>
 
-        <img src="./images/illustration-mockups.svg">
+        <img src="./images/illustration-mockups.svg" alt="mockups">
         <div>
             <h1>Build The Community <br> Your Fans Will Love</h1>
-            <p>Huddle re-imagines the way we build communities. You have <br> a voice, but so does your audience. Create connections <br> with your users as you engage in genuine discussion. </p>
-            <button> Register </button>
+            <p class="large-screen">Huddle re-imagines the way we build communities. You have <br> a voice, but so does your audience. Create connections <br> with your users as you engage in genuine discussion. </p>
+            <p class="small-screen">Huddle re-imagines the way we build communities. You have a voice, but so <br> does your audience. Create connections <br> with your users as you engage in <br> genuine discussion. </p>
+            <button type="submit" onclick="location.href='index.html'">
+                Register
+            </button>
         </div>
+
+
     </main>
 
     <!-- Footer section -->
     <footer>
         <div class="social-links">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
+            <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook-f">  </i> </a>
+            <a href="https://twitter.com/" target="_blank"> <i class="fab fa-twitter"> </i> </a>
+            <a href="https://www.instagram.com/" target="_blank"> <i class="fab fa-instagram"> </i> </a>
         </div>
         <p class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/xZAYEDx" target="_blank">ZAYED GAWI</a>.
