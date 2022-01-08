@@ -1,11 +1,14 @@
 @import './variables';
 @import './resets';
-@import './mobile';
 @mixin flexCenter($direction) {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: $direction;
+}
+
+@function weight($weight-name) {
+    @return map-get($Heading-Font-Weights, $weight-name);
 }
 
 
@@ -14,7 +17,7 @@
 //body
 body {
     background-color: $Violet;
-    background-image: url("../../images/bg-desktop.svg");
+    background-image: url("../../images/bg-desktop.svg"); //background-image
     background-size: cover;
     background-repeat: no-repeat;
     font-weight: bodyWeight(bold);
@@ -37,25 +40,28 @@ body {
         margin: 0 5rem;
         color: $White;
         /******************/
-        //Background image
+        //Mock-up image
         img {
-            margin-top: 2rem;
+            margin-top: 5.9rem;
+            margin-left: 7.5rem;
         }
         div {
-            padding: 0;
-            margin-left: 3rem;
+            margin-left: 5rem;
             margin-bottom: 10rem;
             font-weight: $Body-Font-Weight;
             /********************/
             //Heading
             h1 {
-                font-family: headings(semi-bold);
+                font-weight: weight(semi-bold);
             }
             /**************/
             //Paragraph Header
             p {
                 padding-top: 1.5em;
-                font-family: headings(regular);
+                font-weight: weight(regular);
+            }
+            .small-screen {
+                display: none;
             }
             /****************/
             /*Button*/
@@ -68,12 +74,10 @@ body {
                 border-radius: 50px;
                 box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
                 transition: all 0.3s ease 0s;
-                width: 16%;
+                width: 14.3rem;
                 outline: none;
                 padding: 20px 15px;
                 margin: 20px 0;
-                position: absolute;
-                z-index: 1;
                 overflow: hidden;
                 &:hover {
                     cursor: pointer;
@@ -90,13 +94,16 @@ body {
         div {
             text-align: right;
             //   margin-right: 0.5rem;
+            a:link {
+                text-decoration: none!important;
+            }
             i {
                 margin: 0.5rem;
                 padding: 0.8em 1em;
                 font-size: 1rem;
                 color: $White;
                 border: 1px solid $White;
-                border-radius: 100%;
+                border-radius: 50%;
                 outline: none;
                 transition: all 0.3s ease 0s;
                 &:hover {
@@ -117,10 +124,147 @@ body {
     }
 }
 
-@include mobile {
+
+/*********************************************************/
+
+
+/* Tablet*/
+
+@media only screen and (max-width: 768px) {}
+
+
+/*********************************************************/
+
+
+/* Mobile L*/
+
+@media only screen and (max-width: 425px) {
+    /*Small smartphones [325px -> 425px]*/
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    /********************/
+    /*Body*/
     body {
-        background-image: url("/images/bg-mobile.svg");
-        background-size: cover;
+        background-image: url("../../images/bg-mobile.svg"); //background image
+        background-size: 100%;
         background-repeat: no-repeat;
+        background-color: $Violet;
+        height: 100vh;
+        /*******************/
+        /*Header*/
+        header {
+            /*Header-image*/
+            img {
+                width: 10rem;
+                margin: 1.5em 1.8em;
+                padding: 0.5em 0;
+            }
+        }
+        /***********************/
+        /*Main content*/
+        main {
+            margin: 0;
+            padding: 0;
+            @include flexCenter(column);
+            /*Mock up image*/
+            img {
+                margin: 0 auto;
+                margin-top: 1.7rem;
+                width: 21rem;
+                height: 15.5rem
+            }
+            /*****************/
+            /*Content section*/
+            div {
+                padding: 0;
+                margin: 0;
+                @include flexCenter(column);
+                /*Heading*/
+                h1 {
+                    font-size: 1.9rem;
+                    text-align: center;
+                    margin-top: 2em;
+                }
+                /*Paragraph*/
+                p {
+                    font-size: 1.1em;
+                    text-align: center;
+                    font-weight: weight(regular);
+                }
+                .large-screen {
+                    display: none;
+                }
+                .small-screen {
+                    display: inline-block;
+                }
+                button {
+                    padding: 16px 15px;
+                    font-weight: weight(regular);
+                    font-size: 1em;
+                    width: 15rem;
+                    margin-top: 2em;
+                }
+            }
+        }
+        /*******************/
+        /*Footer*/
+        footer {
+            margin: 4em 0;
+            .social-links {
+                text-align: center;
+                vertical-align: center;
+                outline: none;
+            }
+            div {
+                i {
+                    margin: 0.2rem;
+                    padding: 0.6em 0.7em;
+                    font-size: 0.8em;
+                }
+            }
+            .attribution {
+                margin: 3rem 0;
+            }
+        }
     }
 }
+
+
+/*********************************************************/
+
+
+/* Mobile M*/
+
+@media only screen and (max-width: 375px) {
+    /*Small smartphones [325px -> 425px]*/
+    body {
+        /*******************/
+        /*Header*/
+        header {
+            /*Header-image*/
+            img {
+                width: 8.5rem;
+                margin: 1.5em 1.8em;
+                padding: 0.5em 0;
+            }
+        }
+        /*Main content*/
+        main {
+            img {
+                margin: 0 auto;
+                margin-top: 1rem;
+                width: 19rem;
+                height: 13.5rem
+            }
+        }
+    }
+}
+
+
+/*********************************************************/
+
+
+/* Mobile M*/
