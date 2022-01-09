@@ -93,7 +93,6 @@ body {
         margin-top: 8rem;
         div {
             text-align: right;
-            //   margin-right: 0.5rem;
             a:link {
                 text-decoration: none!important;
             }
@@ -259,6 +258,12 @@ body {
                 width: 19rem;
                 height: 13.5rem
             }
+            div {
+                /*Paragraph*/
+                p {
+                    font-size: 1em;
+                }
+            }
         }
     }
 }
@@ -267,4 +272,76 @@ body {
 /*********************************************************/
 
 
-/* Mobile M*/
+/* Mobile S*/
+
+@media only screen and (max-width: 320px) {
+    /*Small smartphones [320px -> 375px]*/
+    body {
+        /*******************/
+        /*Header*/
+        header {
+            /*Header-image*/
+            img {
+                width: 7.5rem;
+                margin: 1em 1.4em;
+                padding: 0.5em 0;
+            }
+        }
+        /*Main content*/
+        main {
+            img {
+                margin: 0 auto;
+                margin-top: 1.3rem;
+                width: 16rem;
+                height: 11.5rem
+            }
+            /*****************/
+            /*Content section*/
+            div {
+                padding: 0;
+                margin: 0;
+                @include flexCenter(column);
+                /*Heading*/
+                h1 {
+                    font-size: 1.2rem;
+                    text-align: center;
+                    margin-top: 2em;
+                }
+                /*Paragraph*/
+                p {
+                    font-size: 0.8em;
+                    text-align: center;
+                    font-weight: weight(regular);
+                }
+                button {
+                    padding: 15px 10px;
+                    font-weight: weight(regular);
+                    font-size: 0.8em;
+                    width: 12.5rem;
+                    margin-top: 2em;
+                }
+            }
+        }
+        /*******************/
+        /*Footer*/
+        footer {
+            margin: 2em 0;
+            .social-links {
+                text-align: center;
+                vertical-align: center;
+                outline: none;
+            }
+            div {
+                i {
+                    margin: 0.2rem;
+                    padding: 0.6em 0.7em;
+                    font-size: 0.7em;
+                }
+            }
+            .attribution {
+                margin: 3rem 0;
+                font-size: 0.5em;
+            }
+        }
+    }
+}
