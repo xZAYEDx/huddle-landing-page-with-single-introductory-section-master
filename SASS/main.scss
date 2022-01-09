@@ -11,8 +11,12 @@
     @return map-get($Heading-Font-Weights, $weight-name);
 }
 
+//1366x768
 
 /******************************************************/
+
+
+/* Laptop 1440px*/
 
 //body
 body {
@@ -127,9 +131,183 @@ body {
 /*********************************************************/
 
 
+/* Laptop 1024px*/
+
+@media only screen and (max-width: 1024px) {
+    /*Laptop[768px -> 1024px]*/
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body {
+        background-size: 100%;
+        /*********************/
+        /*Header Logo*/
+        header {
+            img {
+                width: 11rem;
+                margin: 0.5em 2em;
+                padding: 2em 0 0 0;
+            }
+        }
+        main {
+            margin: 0;
+            padding: 0;
+            @include flexCenter(row);
+            /*Mock up image*/
+            img {
+                margin: 3.2rem 0 0 2.2rem;
+                //  margin-top: 1em;
+                height: 25rem;
+                width: 35rem;
+                padding: 0 0;
+            }
+            div {
+                margin-bottom: 1rem;
+                font-weight: $Body-Font-Weight;
+                /********************/
+                //Heading
+                h1 {
+                    font-weight: weight(semi-bold);
+                    font-size: 1.7rem;
+                }
+                /**************/
+                //Paragraph Header
+                p {
+                    padding: 1.5em 0;
+                    font-weight: weight(regular);
+                    font-size: 0.71rem;
+                    //  line-height: 1.2rem;
+                }
+                .small-screen {
+                    display: none;
+                }
+                /****************/
+                /*Button*/
+                button {
+                    font-size: 0.8rem;
+                    width: 10rem;
+                    outline: none;
+                    padding: 15px 10px;
+                    margin: 10px 0;
+                }
+            }
+        }
+        /***************/
+        /*Footer*/
+        footer {
+            margin-top: 0.5rem;
+            div {
+                text-align: right;
+                i {
+                    margin: 0.2rem;
+                    padding: 0.9em 1em;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
+
+
+/*********************************************************/
+
+
 /* Tablet*/
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    /*Tablets [426px -> 768]*/
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body {
+        background-image: url("../../images/bg-mobile.svg"); //background image
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: $Violet;
+        height: 100vh;
+        /*********************/
+        /*Header Logo*/
+        header {
+            img {
+                width: 16rem;
+                margin: 0 5em;
+                padding: 5em 0;
+            }
+        }
+        /***********************/
+        /*Main content*/
+        main {
+            margin: 0;
+            padding: 0;
+            @include flexCenter(column);
+            /*Mock up image*/
+            img {
+                margin: 0 auto;
+                margin-top: 1.2rem;
+                width: 38rem;
+                height: 28rem
+            }
+            /*****************/
+            /*Content section*/
+            div {
+                padding: 0;
+                margin: 0;
+                @include flexCenter(column);
+                /*Heading*/
+                h1 {
+                    font-size: 3.7rem;
+                    text-align: center;
+                    margin-top: 3.5em;
+                    font-weight: weight(semi-bold);
+                }
+                /*Paragraph*/
+                p {
+                    font-size: 2em;
+                    text-align: center;
+                    font-weight: weight(regular);
+                }
+                .large-screen {
+                    display: none;
+                }
+                .small-screen {
+                    display: inline-block;
+                }
+                button {
+                    padding: 25px 20px;
+                    font-weight: weight(regular);
+                    font-size: 1.5em;
+                    width: 28rem;
+                    margin-top: 3em;
+                }
+            }
+        }
+        /*******************/
+        /*Footer*/
+        footer {
+            margin: 4em 0;
+            .social-links {
+                text-align: center;
+                vertical-align: center;
+                outline: none;
+            }
+            div {
+                i {
+                    margin: 0.5rem;
+                    padding: 1em 1.1em;
+                    font-size: 1em;
+                }
+            }
+            .attribution {
+                margin: 5rem 0;
+                font-size: 1em;
+            }
+        }
+    }
+}
 
 
 /*********************************************************/
@@ -226,6 +404,7 @@ body {
             }
             .attribution {
                 margin: 3rem 0;
+                font-size: 0.5em;
             }
         }
     }
