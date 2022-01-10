@@ -5,4 +5,4 @@ HTML5, SCSS
 
 ### Screenshot
 Desktop
-![Desktop view](./screenshot/Desktop view.jpg)
+![Desktop view](../../screenshot/Desktop view.jpg)
