@@ -36,4 +36,4 @@ background-image: url("../../images/bg-desktop.svg");
 
 ## Acknowledgments
 
-A big thanks to Grace Snow one of the "Front of the frontend" whoe helped me on Slack to figure out the a way how to add the svg in the background.
+A big thanks to Grace Snow one of the "Front of the frontend" who helped me on Slack to figure out a way how to add the svg in the background.
